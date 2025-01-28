@@ -58,12 +58,9 @@ switch (args[0]) {
       "4. Vigenere Decrypt: node ./src/index.js viginere-decrypt <plain text> <key>",
     );
     console.log(
-      "5. Vigenere Decrypt: node ./src/index.js viginere-decrypt <plain text> <key>",
+      "5. RSA: node ./src/index.js <rsa-encrypt|rsa-decrypt> <plain text> <p> <q>",
     );
-    console.log(
-      "6. RSA: node ./src/index.js rsa-encrypt | rsa-decrypt <plain text> <p> <q>",
-    );
-    console.log("7. Elgamal: node ./src/index.js elgamal <plain text>");
+    console.log("6. Elgamal: node ./src/index.js elgamal <plain text>");
     console.log(
       "-------------------------------------------------------------------------------",
     );

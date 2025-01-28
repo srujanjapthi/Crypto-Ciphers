@@ -3,12 +3,12 @@ export function fastModExponentiationInt(a, n, mod) {
 
   while (n > 0) {
     if (n & 1) {
-      ans *= a;
+      ans = (ans * a) % mod;
     }
 
     n >>= 1;
-    a = a ** 2;
+    a = a ** 2 % mod;
   }
 
-  return mod ? ans % mod : ans;
+  return ans;
 }
