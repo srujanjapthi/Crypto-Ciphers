@@ -15,7 +15,7 @@ let elgamal = null;
 if (/^rsa/.test(args[0])) {
   if (args.length < 3) {
     console.log(
-      "Usage: node ./src/index.js rsa-encrypt | rsa-decrypt <plain text> <p> <q>"
+      "Usage: node ./src/index.js rsa-encrypt | rsa-decrypt <plain text> <p> <q>",
     );
 
     process.exit(1);
@@ -42,65 +42,65 @@ switch (args[0]) {
   case "manual":
     console.log("Manual:");
     console.log(
-      "-------------------------------------------------------------------------------"
+      "-------------------------------------------------------------------------------",
     );
 
     console.log(
-      "1. Affine Encryption: node ./src/index.js affine-encrypt <plain text> <k1> <k2>"
+      "1. Affine Encryption: node ./src/index.js affine-encrypt <plain text> <k1> <k2>",
     );
     console.log(
-      "2. Affine Decryption: node ./src/index.js affine-decrypt <plain text> <k1> <k2>"
+      "2. Affine Decryption: node ./src/index.js affine-decrypt <plain text> <k1> <k2>",
     );
     console.log(
-      "3. Vigenere Encrypt: node ./src/index.js viginere-encrypt <plain text> <key>"
+      "3. Vigenere Encrypt: node ./src/index.js viginere-encrypt <plain text> <key>",
     );
     console.log(
-      "4. Vigenere Decrypt: node ./src/index.js viginere-decrypt <plain text> <key>"
+      "4. Vigenere Decrypt: node ./src/index.js viginere-decrypt <plain text> <key>",
     );
     console.log(
-      "5. Vigenere Decrypt: node ./src/index.js viginere-decrypt <plain text> <key>"
+      "5. Vigenere Decrypt: node ./src/index.js viginere-decrypt <plain text> <key>",
     );
     console.log(
-      "6. RSA: node ./src/index.js rsa-encrypt | rsa-decrypt <plain text> <p> <q>"
+      "6. RSA: node ./src/index.js rsa-encrypt | rsa-decrypt <plain text> <p> <q>",
     );
     console.log("7. Elgamal: node ./src/index.js elgamal <plain text>");
     console.log(
-      "-------------------------------------------------------------------------------"
+      "-------------------------------------------------------------------------------",
     );
     break;
 
   case "affine-encrypt":
     if (args.length < 4) {
       console.log(
-        "Usage: node ./src/index.js affine-encrypt <plain text> <k1> <k2>"
+        "Usage: node ./src/index.js affine-encrypt <plain text> <k1> <k2>",
       );
 
       process.exit(1);
     }
 
     console.log(
-      crypto.affineEncrypt(args[1], Number(args[2]), Number(args[3]))
+      crypto.affineEncrypt(args[1], Number(args[2]), Number(args[3])),
     );
     break;
 
   case "affine-decrypt":
     if (args.length < 4) {
       console.log(
-        "Usage: node ./src/index.js affine-decrypt <cipher text> <k1> <k2>"
+        "Usage: node ./src/index.js affine-decrypt <cipher text> <k1> <k2>",
       );
 
       process.exit(1);
     }
 
     console.log(
-      crypto.affineDecrypt(args[1], Number(args[2]), Number(args[3]))
+      crypto.affineDecrypt(args[1], Number(args[2]), Number(args[3])),
     );
     break;
 
   case "viginere-encrypt":
     if (args.length < 3) {
       console.log(
-        "Usage: node ./src/index.js viginere-encrypt <plain text> <key>"
+        "Usage: node ./src/index.js viginere-encrypt <plain text> <key>",
       );
 
       process.exit(1);
@@ -112,7 +112,7 @@ switch (args[0]) {
   case "viginere-decrypt":
     if (args.length < 3) {
       console.log(
-        "Usage: node ./src/index.js viginere-decrypt <cipher text> <key>"
+        "Usage: node ./src/index.js viginere-decrypt <cipher text> <key>",
       );
 
       process.exit(1);

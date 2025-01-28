@@ -97,8 +97,11 @@ export class Elgamal {
   }
 
   modInverse(a, mod) {
-    let m0 = mod, t, q;
-    let x0 = 0, x1 = 1;
+    let m0 = mod,
+      t,
+      q;
+    let x0 = 0,
+      x1 = 1;
 
     if (mod === 1) return 0;
 
@@ -136,7 +139,8 @@ export class Elgamal {
       .split("")
       .map((char) => {
         const charIndex = charSet.indexOf(char);
-        if (charIndex === -1) throw new Error(`Character "${char}" not in charSet.`);
+        if (charIndex === -1)
+          throw new Error(`Character "${char}" not in charSet.`);
         return (charIndex * this.modExp(e2, r, p)) % p;
       })
       .join(" ");
