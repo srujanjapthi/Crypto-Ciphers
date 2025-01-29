@@ -58,9 +58,12 @@ switch (args[0]) {
       "4. Vigenere Decrypt: node ./src/index.js viginere-decrypt <plain text> <key>",
     );
     console.log(
-      "5. RSA: node ./src/index.js <rsa-encrypt|rsa-decrypt> <plain text> <p> <q>",
+      "5. Extended Euclidian Algorithm: node ./src/index.js extended-euclidian <a> <b>",
     );
-    console.log("6. Elgamal: node ./src/index.js elgamal <plain text>");
+    console.log(
+      "6. RSA: node ./src/index.js <rsa-encrypt|rsa-decrypt> <plain text> <p> <q>",
+    );
+    console.log("7. Elgamal: node ./src/index.js elgamal <plain text>");
     console.log(
       "-------------------------------------------------------------------------------",
     );
@@ -116,6 +119,18 @@ switch (args[0]) {
     }
 
     console.log(crypto.viginereDecrypt(args[1], args[2]));
+    break;
+
+  case "extended-euclidian":
+    if (args.length < 3) {
+      console.log("Usage: node ./src/index.js extended-euclidian <a> <b>");
+
+      process.exit(1);
+    }
+
+    console.log(
+      crypto.euclidianMultiplicationInverse(Number(args[1]), Number(args[2])),
+    );
     break;
 
   case "rsa-encrypt":
